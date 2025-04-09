@@ -1,0 +1,31 @@
+.page {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .field {
+    margin-bottom: 15px;
+  }
+  
+  .field label {
+    font-weight: bold;
+  }
+  
+  .field textarea {
+    width: 100%;
+  }
+  
+  .actions input[type="submit"] {
+    background: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .actions input[type="submit"]:hover {
+    background: #45a049;
+  }

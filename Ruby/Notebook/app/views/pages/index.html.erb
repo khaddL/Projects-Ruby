@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <h1 class="mb-4">Pages</h1>
+
+  <%= link_to "New Page", new_page_path, class: "btn btn-primary mb-3" %>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @pages.each do |page| %>
+        <tr>
+          <td>
+            <%= page.title %>
+            <% if page.emoji.present? %>
+              <span><%= page.emoji.html_safe %></span>
+            <% end %>
+          </td>
+          <td>
+            <%= page.body %>
+          </td>
+          <td><%= link_to 'Show', page, class: "btn btn-sm btn-info" %></td>
+          <td><%= link_to 'Edit', edit_page_path(page), class: "btn btn-sm btn-success" %></td>
+          <td><%= button_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

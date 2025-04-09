@@ -1,0 +1,18 @@
+<% content_for :title, "New page" %>
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4">New Page</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <%= render "form", page: @page %>
+
+      <br>
+
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <%= link_to "Back to pages", pages_path, class: "btn btn-secondary" %>
+      </div>
+    </div>
+  </div>
+</div>
+
